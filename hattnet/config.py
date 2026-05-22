@@ -7,9 +7,9 @@ import torch
 # --------------------------------------------------------------------
 # Paths
 # --------------------------------------------------------------------
-DATA_DIR     = "orj_dataset/"
-MASK_DIR     = "orj_dataset_mask/"
-SKELETON_DIR = "orj_dataset_skeleton/"
+DATA_DIR     = "Hattnet12/"
+MASK_DIR     = "Hattnet12_mask/"
+SKELETON_DIR = "Hattnet12_skeleton/"
 
 # --------------------------------------------------------------------
 # Training settings
