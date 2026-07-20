@@ -6,10 +6,10 @@ This repository contains the official implementation and dataset for HattNet, a 
 
 ## Highlights
 
-- **HattSet-12**: an expert-labeled, publicly released dataset of 12 Arabic calligraphy styles, compiled from Turkey Manuscripts Institution archives.
-- **HattNet**: a tri-stream architecture combining a pretrained DenseNet169 backbone with two HattCNN auxiliary streams (mask + skeleton), enhanced by Coordinate Attention.
-- **90.29% ± 1.62%** accuracy under 5-fold cross-validation (+6.56 over the best single-backbone baseline).
-
+- **HattSet-12**: an expert-labeled, publicly released dataset of 1,000 images across 12 Arabic calligraphy styles, compiled from institutional archives with official permission.
+- **HattNet**: a tri-stream architecture combining a pretrained ConvNeXt-Tiny backbone with two HattCNN auxiliary streams (mask + skeleton), enhanced by Coordinate Attention. 
+- **93.60% ± 0.49%** accuracy under 5-fold cross-validation, outperforming the strongest evaluated baseline (ConvNeXt-Small, 89.80%) by 3.80 points and DenseNet-169 (88.20%) by 5.40 points.
+- **92.33% ± 2.53%** accuracy on an independent external test set of 60 images from previously unseen sources, confirming strong generalization.
 ## Project Structure
 
 ```
@@ -19,7 +19,7 @@ HattNet/
 │   ├── data.py          # Dataset + synchronized augmentation
 │   ├── attention.py     # CBAM, CoordAtt, SimAM, ECA, SE-Block
 │   ├── fusion.py        # Gating / cross-attention fusion
-│   ├── backbone.py      # LightCNN
+│   ├── backbone.py      # HattCNN
 │   ├── model.py         # HattNet main model
 │   ├── train.py         # Training loop + fold runner
 │   └── utils.py         # Plots & seeding
@@ -35,14 +35,14 @@ HattNet/
 Organize the dataset in three parallel folders:
 
 ```
-orj_dataset/
+Hattnet12/
     1/  *.jpg     # Jali Diwânî
     2/  *.jpg     # Diwânî
     ...
     12/ *.jpg     # Tawqi
 
-orj_dataset_mask/        # precomputed binary masks
-orj_dataset_skeleton/    # precomputed stroke skeletons
+Hattnet12_mask/        # precomputed binary masks
+Hattnet12_skeleton/    # precomputed stroke skeletons
 ```
 
 Mask and skeleton folders mirror the RGB folder structure (same class names, same filenames). Use the preprocessing script to generate them from the RGB images.
@@ -83,7 +83,7 @@ If you use HattNet or HattSet-12, please cite:
 
 ```bibtex
 @article{hattnet2026,
-  title  = {HattNet: A Multi-Stream Deep Learning Architecture
+  title  = {HattNet: A Tri-Stream Deep Learning Architecture
             for Arabic Calligraphy Style Classification},
   author = {...},
   journal= {...},
