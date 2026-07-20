@@ -6,4 +6,4 @@
 
 The dataset is hosted on Kaggle:
 
-**➡️ [HattSet-12 on Kaggle](https://www.kaggle.com/datasets/ugrkilc/hattset-12-arabic-calligraphy-style-dataset)**
+**➡️ [HattSet-12 on Kaggle](https://www.kaggle.com/datasets/ugrkilc/hattset-12)**
