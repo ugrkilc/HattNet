@@ -9,7 +9,7 @@ This repository contains the official implementation and dataset for HattNet, a 
 - **HattSet-12**: an expert-labeled, publicly released dataset of 1,000 images across 12 Arabic calligraphy styles, compiled from institutional archives with official permission.
 - **HattNet**: a tri-stream architecture combining a pretrained ConvNeXt-Tiny backbone with two HattCNN auxiliary streams (mask + skeleton), enhanced by Coordinate Attention. 
 - **93.60% ± 0.49%** accuracy under 5-fold cross-validation, outperforming the strongest evaluated baseline (ConvNeXt-Small, 89.80%) by 3.80 points and DenseNet-169 (88.20%) by 5.40 points.
-- **92.33% ± 2.53%** accuracy on an independent external test set of 60 images from previously unseen sources, confirming strong generalization.
+- **92.33% ± 2.26%** accuracy on an independent external test set of 60 images from previously unseen sources, confirming strong generalization.
 ## Project Structure
 
 ```
