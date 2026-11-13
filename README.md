@@ -82,12 +82,13 @@ python scripts/run_all.py
 If you use HattNet or HattSet-12, please cite:
 
 ```bibtex
-@article{hattnet2026,
-  title  = {HattNet: A Tri-Stream Deep Learning Architecture
-            for Arabic Calligraphy Style Classification},
-  author = {...},
-  journal= {...},
-  year   = {2026}
+@article{kilic2026hattnet,
+  title={HattNet: A Tri-Stream Deep Learning Architecture for Arabic Calligraphy Style Classification},
+  author={Kilic, Ugur and Akgonul Yildiz, Betul},
+  journal={Arabian Journal for Science and Engineering},
+  pages={1--18},
+  year={2026},
+  publisher={Springer}
 }
 ```
 
